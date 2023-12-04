@@ -25,7 +25,7 @@ class _SplashPageState extends State<SplashPage> {
           context,
           PageRouteBuilder(
             pageBuilder: (_, __, ___) => const OnboardingPage(),
-            transitionDuration: const Duration(milliseconds: 600),
+            transitionDuration: const Duration(milliseconds: 550),
             transitionsBuilder: (_, a, __, c) => FadeTransition(
               opacity: a,
               child: c,
