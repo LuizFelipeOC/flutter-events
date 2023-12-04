@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../home/views/home_page.dart';
 import '../controller/onboading_controller.dart';
 import 'widgets/dots.dart';
 import 'widgets/onboarding_button.dart';
@@ -26,14 +27,26 @@ class _OnboardingPageState extends State<OnboardingPage> {
               alignment: Alignment.centerLeft,
               child: TextButton(
                 child: const Text(
-                  'SKIP ',
+                  'SKIP',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                     color: Colors.lightBlue,
                   ),
                 ),
-                onPressed: () => {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (_, __, ___) => const HomePage(),
+                      transitionDuration: const Duration(milliseconds: 550),
+                      transitionsBuilder: (_, a, __, c) => FadeTransition(
+                        opacity: a,
+                        child: c,
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
           ),

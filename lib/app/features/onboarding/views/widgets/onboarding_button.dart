@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../home/views/home_page.dart';
 import '../../controller/onboading_controller.dart';
 
 class OnboardingButton extends StatelessWidget {
@@ -16,7 +17,21 @@ class OnboardingButton extends StatelessWidget {
       valueListenable: controller,
       builder: (_, value, __) {
         return FloatingActionButton.extended(
-          onPressed: value == controller.list.length - 1 ? () => {} : controller.nextPage,
+          onPressed: value == controller.list.length - 1
+              ? () {
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (_, __, ___) => const HomePage(),
+                      transitionDuration: const Duration(milliseconds: 550),
+                      transitionsBuilder: (_, a, __, c) => FadeTransition(
+                        opacity: a,
+                        child: c,
+                      ),
+                    ),
+                  );
+                }
+              : controller.nextPage,
           backgroundColor: Colors.blue,
           label: value == controller.list.length - 1
               ? Text(
