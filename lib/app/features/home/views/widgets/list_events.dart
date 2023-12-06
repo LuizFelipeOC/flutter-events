@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../controller/list_events_controller.dart';
 import '../controller/states/list_events_state.dart';
-import 'card_events.dart';
+import 'card_events/card_events.dart';
 
 class ListOfEvents extends StatefulWidget {
   const ListOfEvents({
