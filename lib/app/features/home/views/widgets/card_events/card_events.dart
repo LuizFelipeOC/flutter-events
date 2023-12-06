@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../controller/card_events_controller.dart';
 import 'header_card_events.dart';
-import 'network_baner_events.dart';
+import 'network_banner_events.dart';
 
 class CardEvents extends StatefulWidget {
   const CardEvents({
