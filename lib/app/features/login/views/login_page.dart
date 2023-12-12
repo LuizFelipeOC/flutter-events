@@ -36,24 +36,23 @@ class _LoginPageState extends State<LoginPage> {
           ),
           child: Container(
             alignment: Alignment.center,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                IconButton(
-                  constraints: const BoxConstraints(),
-                  padding: EdgeInsets.zero,
-                  onPressed: () => Navigator.pop(context),
-                  icon: const Icon(
-                    Icons.arrow_back,
-                    size: 34,
-                    color: Colors.white,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  IconButton(
+                    constraints: const BoxConstraints(),
+                    padding: EdgeInsets.zero,
+                    onPressed: () => Navigator.pop(context),
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      size: 34,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 20),
-                Center(
-                  child: SingleChildScrollView(
-                    physics: const BouncingScrollPhysics(),
+                  const SizedBox(height: 20),
+                  Center(
                     child: Card(
                       child: Container(
                         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
@@ -71,8 +70,8 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
