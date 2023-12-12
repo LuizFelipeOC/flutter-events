@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class HomeAppBar extends PreferredSize {
+  final Function()? onTap;
   HomeAppBar({
     super.key,
+    this.onTap,
   }) : super(
           preferredSize: const Size.fromHeight(250),
           child: Padding(
@@ -14,14 +16,17 @@ class HomeAppBar extends PreferredSize {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    height: 50,
-                    alignment: Alignment.topRight,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.grey.shade200,
-                      child: Icon(
-                        Icons.person_outline_rounded,
-                        color: Colors.grey.shade500,
+                  GestureDetector(
+                    onTap: onTap,
+                    child: Container(
+                      height: 50,
+                      alignment: Alignment.topRight,
+                      child: CircleAvatar(
+                        backgroundColor: Colors.grey.shade200,
+                        child: Icon(
+                          Icons.person_outline_rounded,
+                          color: Colors.grey.shade500,
+                        ),
                       ),
                     ),
                   ),
