@@ -12,6 +12,7 @@ class LoginForm extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           TextFormField(
+            cursorColor: Colors.black,
             keyboardType: TextInputType.emailAddress,
             decoration: const InputDecoration(
               hintText: 'E-mail',
@@ -19,6 +20,7 @@ class LoginForm extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           TextFormField(
+            cursorColor: Colors.black,
             obscureText: true,
             decoration: const InputDecoration(
               hintText: 'Senha',
