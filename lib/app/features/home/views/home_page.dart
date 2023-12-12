@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
             context,
             PageRouteBuilder(
               pageBuilder: (_, __, ___) => const LoginPage(),
-              transitionDuration: const Duration(milliseconds: 550),
+              transitionDuration: const Duration(milliseconds: 400),
               transitionsBuilder: (_, a, __, c) => FadeTransition(
                 opacity: a,
                 child: c,
